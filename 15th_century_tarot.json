@@ -2,7 +2,7 @@
     "id": "15th_century_tarot",
     "name": "Marziano",
     "author": ["Elliott Holland (Art)", "Seth du Preez (Code)"],
-    "description": "Adds a set of tarot cards based on the Marziano deck, the oldest known relative of modern tarot cards",
+    "description": "Adds a set of tarot cards based on the 15th century Marziano deck, the oldest known relative of modern tarot cards",
     "prefix": "tarot15C",
     "main_file": "15th_century_tarot.lua",
     "badge_colour": "781e0c",
