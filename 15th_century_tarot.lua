@@ -1,6 +1,6 @@
 SMODS.Atlas {
     key = "15C_tarot",
-    path = "15th_century_tarot.png",
+    path = "marziano_tarot.png",
     px = 71,
     py = 95
 }
@@ -308,32 +308,32 @@ SMODS.Consumable({
     end
 })
 
--- SMODS.Consumable({
---     set = "Tarot", key = "apollo", cost = 10, discovered = true,
---     atlas = "15C_tarot",    
---     pos = {
---         x = 4,
---         y = 0
---     },
---     loc_txt = {
---         name = 'Apollo',
-        -- text = {
-        --     "Disables (or changes?) current boss blind"
-        -- }
---     },
---     config = {},
---     loc_vars = function(self, info_queue, card)
+SMODS.Consumable({
+    set = "Tarot", key = "apollo", cost = 10, discovered = true,
+    atlas = "15C_tarot",    
+    pos = {
+        x = 4,
+        y = 0
+    },
+    loc_txt = {
+        name = 'Apollo',
+        text = {
+            "Disable current boss blind"
+        }
+    },
+    config = {},
 
---     end,
+    can_use = function(self, card)
+        if G.STATE ~= G.STATES.HAND_PLAYED and G.STATE ~= G.STATES.DRAW_TO_HAND and G.STATE ~= G.STATES.PLAY_TAROT then
+            return true
+        end        
+    end,
 
---     can_use = function(self, card)
     
---     end,
+    use = function(self, card, area, copier)
     
---     use = function(self, card, area, copier)
-    
---     end
--- })
+    end
+})
 
 SMODS.Consumable({
     set = "Tarot", key = "nettuno", cost = 10, discovered = true,
