@@ -42,9 +42,9 @@ ehthumbs.db
 Thumbs.db
 *.swp
 
-################
-# Hidden files #
-################
+####################
+# IDE config files #
+####################
 .vscode
 
 ###################
